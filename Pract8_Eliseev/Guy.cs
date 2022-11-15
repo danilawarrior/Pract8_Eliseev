@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pract8_Eliseev
 {
-    class Guy: IHuman , IComparable
+    class Guy: IHuman , IComparable, ICloneable
     {
         private string _name;
         private string _lastName;
@@ -26,6 +26,11 @@ namespace Pract8_Eliseev
         {
             Guy temp = (Guy)obj;
             return this.LastName.CompareTo(temp.LastName);
+        }
+
+        public Guy ShallowClone()
+        {
+            return (Guy)this.MemberwiseClone();
         }
 
         public string Greetings(IHuman human)

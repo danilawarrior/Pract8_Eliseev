@@ -59,6 +59,10 @@
                 <Button Click="add" Content="Добавить" Height="40"/>
 
                 <Button Click="greetings" Content="Приветствие" Height="40"/>
+                
+                <Button Click="compare" Content="Сравнить" Height="40"/>
+                
+                
             </StackPanel>
             <ListBox
                 x:Name="ListBoxOfHumans"
